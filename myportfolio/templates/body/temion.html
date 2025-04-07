@@ -1,0 +1,95 @@
+{% load static %}
+
+
+<div class="container-fluid bg-light" id="testimonial" style="background: rgba(98, 68, 197, .9);">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Témoignage</h1>
+        <div class="row justify-content-center">
+            <!-- Colonne gauche contenant les images -->
+            <div class="col-lg-3 d-none d-lg-block">
+                <div class="testimonial-left h-100">
+                    <!-- Les images seront insérées ici dynamiquement -->
+                </div>
+            </div>
+
+            <!-- Section des témoignages au centre -->
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="owl-carousel testimonial-carousel">
+                    <!-- Les témoignages seront insérés ici dynamiquement -->
+                </div>
+            </div>
+
+            <!-- Colonne droite contenant les images -->
+            <div class="col-lg-3 d-none d-lg-block">
+                <div class="testimonial-right h-100">
+                    <!-- Les images seront insérées ici dynamiquement -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Définition des témoignages dans une variable JavaScript
+const testimonials = [
+    {
+        name: "Client Name 1",
+        profession: "Profession 1",
+        message: "Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.",
+        image: "{% static 'img/testimonial-1.jpg' %}"
+    },
+    {
+        name: "Client Name 2",
+        profession: "Profession 2",
+        message: "Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.",
+        image: "{% static 'img/testimonial-2.jpg' %}"
+    },
+    {
+        name: "Client Name 3",
+        profession: "Profession 3",
+        message: "Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.",
+        image: "{% static 'img/testimonial-3.jpg' %}"
+    }
+];
+
+// Sélectionner les éléments où les données seront insérées
+const leftColumn = document.querySelector('.testimonial-left');
+const centerCarousel = document.querySelector('.testimonial-carousel');
+const rightColumn = document.querySelector('.testimonial-right');
+
+// Boucle pour insérer dynamiquement les témoignages et les images
+testimonials.forEach((testimonial, index) => {
+    // Créer l'élément pour afficher les témoignages dans le carousel central
+    const testimonialItem = document.createElement('div');
+    testimonialItem.classList.add('testimonial-item', 'text-center');
+
+    testimonialItem.innerHTML = `
+        <div class="position-relative mb-5">
+            <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="${testimonial.image}" alt="">
+            <div class="testimonial-icon">
+                <i class="fa fa-quote-left text-primary"></i>
+            </div>
+        </div>
+        <p class="fs-5 fst-italic">${testimonial.message}</p>
+        <hr class="w-25 mx-auto">
+        <h5>${testimonial.name}</h5>
+        <span>${testimonial.profession}</span>
+    `;
+    centerCarousel.appendChild(testimonialItem);
+
+    // Insérer les images dans les colonnes gauche et droite
+    if (index % 2 === 0) {
+        const leftImage = document.createElement('img');
+        leftImage.classList.add('img-fluid', 'wow', 'fadeIn');
+        leftImage.setAttribute('data-wow-delay', '0.1s');
+        leftImage.src = testimonial.image;
+        leftColumn.appendChild(leftImage);
+    } else {
+        const rightImage = document.createElement('img');
+        rightImage.classList.add('img-fluid', 'wow', 'fadeIn');
+        rightImage.setAttribute('data-wow-delay', '0.3s');
+        rightImage.src = testimonial.image;
+        rightColumn.appendChild(rightImage);
+    }
+});
+</script>

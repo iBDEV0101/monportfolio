@@ -1,0 +1,66 @@
+<!-- Projects Start -->
+{% load static %}
+<div class="container-xxl py-6 " id="project">
+    <div class="container">
+        <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+
+            <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                <p>Mes projets</p>
+                <h2>{{ data.projects_data.section_title }}</h2>
+            </header>
+            <div class="col-lg-6 text-lg-end">
+                <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
+                    {% for filter in data.projects_data.filters %}
+                    <li class="mx-3 {% if filter.active %}active{% endif %}" data-filter="{{ filter.filter }}">
+                        {{ filter.name }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
+            {% for project in data.projects_data.projects %}
+            <div class="col-lg-4 col-md-6 portfolio-item {{ project.category }}">
+                <div class="portfolio-img rounded overflow-hidden">
+                    <img class="img-fluid" src="{% static project.image %}" alt="">
+                    <div class="portfolio-btn">
+                        <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1"
+                           href="{{ project.view_link }}" data-lightbox="portfolio">
+                            <i class="fa fa-eye"></i>
+                        </a>
+                        <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1"
+                           href="{{ project.detail_link }}">
+                            <i class="fa fa-link"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<script>
+$(document).ready(function() {
+    // Initialiser Isotope
+    var $portfolioContainer = $('.portfolio-container').isotope({
+        itemSelector: '.portfolio-item',
+        layoutMode: 'fitRows'
+    });
+
+    // Gérer les clics sur les filtres
+    $('#portfolio-flters li').on('click', function() {
+        // Retirer la classe active de tous les éléments
+        $('#portfolio-flters li').removeClass('active');
+        // Ajouter la classe active à l'élément cliqué
+        $(this).addClass('active');
+
+        // Récupérer le filtre
+        var filterValue = $(this).attr('data-filter');
+
+        // Appliquer le filtre
+        $portfolioContainer.isotope({ filter: filterValue });
+    });
+});
+</script>
+<!-- Projects End -->

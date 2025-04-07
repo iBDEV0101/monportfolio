@@ -1,0 +1,17 @@
+{
+    "nom": "Portfolio de SAWADOG Ibrahim",
+    "description": "Développeur Flutter et Django",
+    "competences": ["Flutter", "Django", "Python", "Google Maps API"],
+    "projets": [
+        {
+            "titre": "Application de covoiturage",
+            "annee": 2024,
+            "technologies": ["Flutter", "Django", "PostgreSQL"]
+        },
+        {
+            "titre": "Gestion des transports",
+            "annee": 2025,
+            "technologies": ["Django", "React"]
+        }
+    ]
+}

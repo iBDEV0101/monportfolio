@@ -1,0 +1,87 @@
+{% load static %}
+<!-- Charger les fichiers statiques -->
+<style>
+
+
+.section-header {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.section-header p {
+    display: inline-block;
+    margin: 0 30px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: #ffffff;
+}
+
+.section-header p::before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    top: 11px;
+    right: 0;
+    left: -30px;
+    background: rgba(98, 68, 197, .9);
+    z-index: -1;
+}
+
+.section-header p::after {
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 3px;
+    top: 11px;
+    left: 3px;
+    background: rgba(98, 68, 197, .9);
+    z-index: 1;
+}
+
+.section-header h2 {
+    margin: 0;
+    position: relative;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+@media (max-width: 767.98px) {
+    .section-header h2 {
+        font-size: 30px;
+    }
+}
+</style>
+<div class="container-xxl py-6 pb-5" id="team">
+    <div class="container">
+        <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                <p>Mon équipe</p>
+                <h2>Membres de l'équipe d'experts</h2>
+            </header>
+            <div class="col-lg-6 text-lg-end">
+                <a class="btn btn-primary py-3 px-5" href="">Contactez-nous</a>
+            </div>
+        </div>
+        <div class="row g-4">
+            {% for member in data.team_members %}
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.{{ forloop.counter }}s">
+                <div class="team-item position-relative">
+                    <img class="img-fluid rounded" src="{% static member.image %}" alt="">
+                    <div class="team-text bg-white rounded-end p-4">
+                        <div>
+                            <h5>{{ member.name }}</h5>
+                            <span>{{ member.role }}</span>
+                        </div>
+                        <i class="fa fa-arrow-right fa-2x text-primary"></i>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

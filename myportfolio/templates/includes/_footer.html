@@ -1,0 +1,154 @@
+<style>
+    .footer {
+    position: relative;
+    margin-top: 0px;
+    background: rgba(98, 68, 197, .9);
+}
+
+.footer .container-fluid {
+    padding: 60px 0 0 0;
+}
+
+.footer .footer-info {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.footer .footer-info h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.footer .footer-info h3 {
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.footer .footer-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer .footer-menu p {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 0 15px;
+    border-right: 1px solid #ffffff;
+}
+
+.footer .footer-menu p:last-child {
+    border: none;
+}
+
+.footer .footer-social {
+    position: relative;
+    margin-top: 15px;
+}
+
+.footer .footer-social a {
+    display: inline-block;
+}
+
+.footer .footer-social a i {
+    margin-right: 15px;
+    font-size: 20px;
+    color: #ffffff;
+    transition: .3s;
+}
+
+.footer .footer-social a:last-child i {
+    margin: 0;
+}
+
+.footer .footer-social a:hover i {
+    color: #414141;
+}
+
+.footer .copyright {
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.footer .copyright::before {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 1px;
+    top: 0;
+    left: 25%;
+    background: rgba(256, 256, 256, .2);
+}
+
+.footer .copyright p {
+    margin: 0;
+    color: #ffffff;
+}
+
+.footer .copyright .col-md-6:last-child p {
+    text-align: right;
+}
+
+.footer .copyright p a {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.footer .copyright p a:hover {
+    color: #414141;
+}
+
+@media (max-width: 575.98px) {
+    .footer .footer-info h2 {
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .footer .footer-info h3 {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .footer .footer-menu p {
+        font-size: 16px;
+        line-height: 16px;
+        padding: 0 5px;
+    }
+}
+
+</style>
+       <div class="footer wow fadeIn" data-wow-delay="0.3s">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="footer-info">
+                        <h2>{{ data.nom }}</h2>
+                        <h3>{{ data.adresse }}</h3>
+                        <div class="footer-menu">
+                            <p>{{ data.tel }}</p>
+                            <p>{{ data.email }}</p>
+                        </div>
+                        <div class="footer-social">
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-youtube"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container copyright">
+                    <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved | Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                </div>
+            </div>
+        </div>

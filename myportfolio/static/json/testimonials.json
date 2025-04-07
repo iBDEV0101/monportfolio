@@ -1,0 +1,22 @@
+{
+  "testimonials": [
+    {
+      "name": "Client Name 1",
+      "profession": "Profession 1",
+      "message": "Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.",
+      "image": "img/testimonial-1.jpg"
+    },
+    {
+      "name": "Client Name 2",
+      "profession": "Profession 2",
+      "message": "Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.",
+      "image": "img/testimonial-2.jpg"
+    },
+    {
+      "name": "Client Name 3",
+      "profession": "Profession 3",
+      "message": "Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.",
+      "image": "img/testimonial-3.jpg"
+    }
+  ]
+}

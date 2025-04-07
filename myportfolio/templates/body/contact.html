@@ -1,0 +1,85 @@
+<div class="container-xxl" id="contact">
+    <div class="container py-5">
+        <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-6">
+                <h1 class="display-5 mb-0">Collaborons ensemble</h1>
+            </div>
+            <div class="col-lg-6 text-lg-end">
+                <a class="btn btn-primary py-3 px-5" href="">Envoyez un message</a>
+            </div>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <p class="mb-2">Adresse :</p>
+                <h3 class="fw-bold">{{ data.adresse }}</h3>
+                <hr class="w-100">
+                <p class="mb-2">Téléphone :</p>
+                <h3 class="fw-bold">{{ data.tel }}</h3>
+                <hr class="w-100">
+                <p class="mb-2">E-mail :</p>
+                <h3 class="fw-bold">{{ data.email }}</h3>
+                <hr class="w-100">
+                <p class="mb-2">Suivez-nous :</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <p class="mb-4">Le formulaire de contact est actuellement inactif.</p>
+                <form>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="name" placeholder="Votre nom">
+                                <label for="name">Nom et prénom</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="email" placeholder="Votre e-mail">
+                                <label for="email">E-mail</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="subject" placeholder="Objet">
+                                <label for="subject">Objet</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Écrivez votre message ici" id="message" style="height: 100px"></textarea>
+                                <label for="message">Message</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary py-3 px-5" type="submit">Envoyer</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<h2>Nos Services</h2>-->
+<!--<h1>{{ data.nom }}</h1>-->
+<!--    <p>{{ data.description }}</p>-->
+<!--    <h2>Compétences</h2>-->
+<!--    <ul>-->
+<!--        {% for competence in data.competences %}-->
+<!--            <li>{{ competence }}</li>-->
+<!--        {% endfor %}-->
+<!--    </ul>-->
+
+<!--    <h2>Projets</h2>-->
+<!--    <ul>-->
+<!--        {% for projet in data.projets %}-->
+<!--            <li>-->
+<!--                <strong>{{ projet.titre }}</strong> ({{ projet.annee }})<br>-->
+<!--                Technologies : {{ projet.technologies|join:", " }}-->
+<!--            </li>-->
+<!--        {% endfor %}-->
+<!--    </ul>-->
