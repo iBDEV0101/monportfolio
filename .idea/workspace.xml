@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e33a2cf-90fa-4ac7-bf79-e9ca77ae9c33" name="Changes" comment="premier commit&#10;&#10;Signed-off-by: iBDEV0101 &lt;ibdev0101@gmail.com&gt;" />
+    <list default="true" id="5e33a2cf-90fa-4ac7-bf79-e9ca77ae9c33" name="Changes" comment="premier commit&#10;&#10;Signed-off-by: iBDEV0101 &lt;ibdev0101@gmail.com&gt;">
+      <change afterPath="$PROJECT_DIR$/myportfolio/myportfolio/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,11 +47,25 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ibrahimsaw&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:iBDEV0101/monportfolio.git&quot;,
+    &quot;accountId&quot;: &quot;626e362e-efbe-41f2-8c09-d0634b3853d7&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2vGo0KCwpL6IJLmFv9Kb84aBHq8" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -61,8 +78,9 @@
     &quot;Python.migrations.executor&quot;: &quot;Run&quot;,
     &quot;Python.runserver.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Université/Université/Cours/COURS IT3/exo/python/Django/myportfolio&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Université/Université/Cours/COURS IT3/exo/python/Django/portfolio&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
 }</component>
@@ -137,8 +155,8 @@
     </configuration>
     <list>
       <item itemvalue="Python.makemigrations" />
-      <item itemvalue="Python.migrate" />
       <item itemvalue="Python.runserver" />
+      <item itemvalue="Python.migrate" />
     </list>
     <recent_temporary>
       <list>
@@ -216,5 +234,21 @@
     <MESSAGE value="premier commit" />
     <MESSAGE value="premier commit&#10;&#10;Signed-off-by: iBDEV0101 &lt;ibdev0101@gmail.com&gt;" />
     <option name="LAST_COMMIT_MESSAGE" value="premier commit&#10;&#10;Signed-off-by: iBDEV0101 &lt;ibdev0101@gmail.com&gt;" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/myportfolio/app/views.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/myportfolio/app/views.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
